@@ -6,8 +6,8 @@ import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] });
 
 export default async function Home() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/todos');
-	const todos: Array<{ id: string; title: string }> = await res.json();
+	const todosRes = await fetch('https://jsonplaceholder.typicode.com/todos');
+	const todos: Array<{ id: string; title: string }> = await todosRes.json();
 
 	return (
 		<main className={styles.main}>
